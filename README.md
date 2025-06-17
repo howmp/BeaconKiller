@@ -4,16 +4,16 @@
 
 ## 优势
 
-相对于其他工具而言，由于仅使用etw技术，所谓稳定性更强
+相对于其他工具而言，由于仅使用etw技术，所以稳定性更强
 
 1. 不需要加载内核模块
-1. 不需要注入dll
+2. 不需要注入dll
 
 ## 数据来源
 
-1.进程相关/镜像相关事件:由Windows Kernel Trace提供
-2.WinINet相关事件:由Microsoft-Windows-WinINet提供
-3.WinHTTP相关事件:由Microsoft-Windows-WebIO提供
+1. 进程相关/镜像相关事件:由Windows Kernel Trace提供
+2. WinINet相关事件:由Microsoft-Windows-WinINet提供
+3. WinHTTP相关事件:由Microsoft-Windows-WebIO提供
 
 ## 检测原理
 
