@@ -15,6 +15,9 @@ jobs:
       - name: Setup MSBuild
         uses: microsoft/setup-msbuild@v1
 
+      - name: Install zip (via Chocolatey)
+        run: choco install zip -y
+        
       - name: Restore NuGet packages
         run: nuget restore BeaconKiller.sln
 
