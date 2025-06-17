@@ -21,6 +21,7 @@
 
 1. 启动时:加载wininet.dll或winhttp.dll时堆栈回溯会出现unbacked
 2. 通信时:堆栈回溯会出现unbacked
+   * 通信时的检测可无视sleepmask,因为sleepmask仅在休眠时生效
 
 ## unbacked
 
