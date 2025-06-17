@@ -19,8 +19,8 @@
 
 由于beacon使用sRDI等shellcode加载技术，有以下特征
 
-1.启动时:加载wininet.dll或winhttp.dll时堆栈回溯会出现unbacked
-2.通信时:堆栈回溯会出现unbacked
+1. 启动时:加载wininet.dll或winhttp.dll时堆栈回溯会出现unbacked
+2. 通信时:堆栈回溯会出现unbacked
 
 ## unbacked
 
