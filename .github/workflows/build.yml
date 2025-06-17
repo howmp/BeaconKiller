@@ -1,0 +1,28 @@
+name: Build
+
+on:
+  push:
+    tags:
+      - "v*.*.*"
+
+jobs:
+  build:
+    runs-on: windows-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup MSBuild
+        uses: microsoft/setup-msbuild@v1
+
+      - name: Build solution
+        run: msbuild BeaconKiller.sln /p:Configuration=Release
+
+      - name: Zip Folder
+        run: zip -r "BeaconKiller-${{ github.ref_name }}.zip" bin/Release/
+
+      - name: Release
+        uses: softprops/action-gh-release@v1
+        if: startsWith(github.ref, 'refs/tags/')
+        with:
+          files: "BeaconKiller-${{ github.ref_name }}.zip"
